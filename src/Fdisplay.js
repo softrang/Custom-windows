@@ -1,4 +1,4 @@
-import React, { useRef }  from 'react'
+import React from 'react'
 import Walpaper from "./image/dwalpaper.jpg"
 import Starticon from "./image/starticon.png"
 import Msedge from "./image/msedgeicon.png"
@@ -7,15 +7,14 @@ import Gcrome from "./image/gcrome.png"
 import Vscode from "./image/vscodeicon.png"
 import Aiicon from "./image/aiicon.png"
 
-import { useGSAP } from '@gsap/react'
-import gsap from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
+
+
 import Edge from './browser/Edge'
 import Vscodee from './browser/Vscodee'
 import Adove from './browser/Adove'
 import Filee from './filemanager/Filee'
 
-gsap.registerPlugin(ScrollTrigger);
+
 
 
 
