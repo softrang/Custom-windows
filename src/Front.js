@@ -10,10 +10,14 @@ const Front = () => {
     useEffect(() => {
         const Start = document.querySelector(".start");
         const Monitor = document.querySelector(".monitor");
+        const Premonitor = document.querySelector(".premonitor");
+
         const On = document.querySelector(".on");
         Monitor.style.opacity = "0";
         const handleClick = () => {
             Monitor.style.opacity = "1";
+            Premonitor.style.display = "none";
+
             Monitor.style.transition = "1s all ease-in-out";
             On.style.backgroundColor = "red";
            
@@ -251,7 +255,8 @@ Ballproject.addEventListener("click", ()=>{
   return (
     <div className='w-screen h-screen bg-zinc-800 flex items-center justify-end relative'>
         <div className='pc w-[8vw] h-[100vh] bg-zinc-800 absolute left-0 flex flex-col items-center justify-between'>
-            <div className='w-1/2 h-[4vw] bg-zinc-900 rounded-full m-auto start' >
+            <div className='w-1/2 h-[4vw] bg-zinc-900 flex items-center justify-center rounded-full m-auto start cursor-pointer' >
+            <p className='text-xl cursor-pointer'>on</p>
 
             </div>
             <div className='w-[1vw] h-[1vw] bg-zinc-900 rounded-full m-auto on' >
@@ -300,6 +305,7 @@ Ballproject.addEventListener("click", ()=>{
 
 
         <div className='display w-[92vw] m-auto h-[100vh] bg-zinc-900 absolute '>
+           
             <Monitor/>
             <Fdisplay/>
            

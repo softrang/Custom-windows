@@ -53,6 +53,10 @@ const Monitor = () => {
 })
 
   return (
+<>  
+    <div className='premonitor w-full h-full flex items-center justify-center cursor-pointer '> 
+    <h1 className='text-center text-5xl text-zinc-400 cursor-pointer'>Please Start The PC click by the <strong> on</strong> button</h1>
+    </div>
     <div className='monitor w-full h-full bg-sky-600 flex items-center justify-center'>
       <div ref={w0st} className='w-1/2 h-1/2 flex flex-col items-center justify-center'>
       <h1 ref={w1st} className=' text-[2vw] mb-2 opacity-1' >Windows is starting</h1>
@@ -77,6 +81,7 @@ const Monitor = () => {
 
       
     </div>
+    </>
   )
 }
 
