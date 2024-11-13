@@ -1,38 +1,78 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.marquee {
+    width: 100%;
+    overflow: hidden;
+    box-sizing: border-box;
+    
   }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+  
+  .marquee-content {
+   min-width: 100%;
+   
+    animation: marquee 30s linear infinite;
   }
-  to {
-    transform: rotate(360deg);
+
+  
+  @keyframes marquee {
+    0% {
+      transform: translateX(100%);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
   }
+
+
+
+
+
+  .checklist {
+    list-style-type: none; /* Remove default bullet points */
+    padding-left: 0;
+  }
+  
+  .checklist li {
+    position: relative;
+    padding-left: 25px; /* Space for the checkmark */
+    margin-bottom: 10px; /* Space between list items */
+    
+  }
+  
+  .checklist li::before {
+    content: '✔'; /* Unicode character for checkmark */
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: green; /* Set checkmark color */
+   
+  }
+  
+
+
+/*Singlae page start */
+ul.custom-checklist {
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
+
+ul.custom-checklist li {
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 10px;
+  
+
+}
+
+ul.custom-checklist li::before {
+  content: '✅';
+  position: absolute;
+  left: 0;
+  font-size: 18px;
+  color: green;
+ 
+ 
+ 
+}
+/* singlae page end*/
+
+
